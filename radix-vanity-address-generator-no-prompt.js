@@ -6,6 +6,10 @@
 //
 // THEN RUN WITH BELOW COMMAND:
 // node ./radix-vanity-address-generator-no-prompt.js <suffix_to_look_for>
+//
+// TO RUN AND OUTPUT RESULTS TO FILE:
+// node ./radix-vanity-address-generator-no-prompt.js <suffix_to_look_for> > ./generator_output.txt
+
 
 const bip39 = require('bip39');
 var HDKey = require('hdkey');
