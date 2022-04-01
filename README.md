@@ -30,7 +30,12 @@ npm install bech32@2.0.0
 npm install buffer@5.7.1
 ```
 
-Finally, run the script (replacing "arg" with your suffix):
+Finally, run the script (replace "arg" with your suffix):
 ```
 node ./radix-vanity-address-generator.js arg
+```
+
+IF, you want to run and output save results into a file (replace "arg" with your suffix):
+```
+node ./radix-vanity-address-generator.js arg > ./generator_output.txt
 ```
