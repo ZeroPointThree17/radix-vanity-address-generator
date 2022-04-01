@@ -27,7 +27,7 @@ while(found == false){
 	              
 	var childkey = hdkey.derive("m/44'/1022'/0'/0/0'")
 	var privatekey = childkey.privateKey.toString('hex')
-	var publicKey = childkey.publicKey.toString('hex');
+	var publickey = childkey.publicKey.toString('hex');
 	var readdr_bytes = Buffer.concat([Buffer.from([0x04]), childkey.publicKey]);
 	var readdr_bytes5 = convertbits(Uint8Array.from(readdr_bytes), 8, 5, true);
 	var rdx_addr = bech32.encode("rdx", readdr_bytes5);
@@ -39,7 +39,7 @@ while(found == false){
 
 		console.log('Execution Time: ' + msToTime(time));
 		console.log('Radix Address: ' + rdx_addr);
-		console.log('Public Key: ' + publicKey);
+		console.log('Public Key: ' + publickey);
 		console.log('Private Key: ' + privatekey);
 		console.log('Mnemonic: ' + mnemonic);
 		console.log('\n');
