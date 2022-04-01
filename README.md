@@ -1,5 +1,7 @@
 # Radix Vanity Address Generator
 
+NOTE: This script can run from seconds to many hours depending how long your prefix is!  If the prefix is too long, it may never finish in a reasonable amount of time!
+
 First, install nodejs, npm, and git tools:
 
 ```
