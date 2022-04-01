@@ -56,8 +56,6 @@ inquirer.prompt(questions).then(answers => {
 				console.log('Public Key: ' + publicKey);
 				console.log('Private Key: ' + privatekey);
 				console.log('Mnemonic: ' + mnemonic);
-
-
 				console.log('\n');
 				found = true;
 			}
