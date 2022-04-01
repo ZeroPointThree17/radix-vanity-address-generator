@@ -4,6 +4,10 @@
 // npm install hdkey@2.0.1
 // npm install bech32@2.0.0
 // npm install buffer@5.7.1
+//
+// THEN RUN WITH BELOW COMMAND:
+// node ./radix-vanity-address-generator.js
+
 
 var inquirer = require('inquirer');
 const bip39 = require('bip39');
