@@ -32,7 +32,6 @@ inquirer.prompt(questions).then(answers => {
 			var mnemonic = bip39.generateMnemonic();
 			var seed = bip39.mnemonicToSeedSync(mnemonic).toString('hex');
 			var hdkey = HDKey.fromMasterSeed(Buffer.from(seed, 'hex'))
-			 
 			              
 			var childkey = hdkey.derive("m/44'/1022'/0'/0/0'")
 			var privatekey = childkey.privateKey.toString('hex')
@@ -52,7 +51,6 @@ inquirer.prompt(questions).then(answers => {
 		}
 	}
 );
-
 
 
 
