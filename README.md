@@ -1,6 +1,6 @@
-# radix-vanity-address-generator
+# Radix Vanity Address Generator
 
-First, install nodejs and npm:
+First, install nodejs, npm, and git tools:
 
 ```
 sudo apt update
