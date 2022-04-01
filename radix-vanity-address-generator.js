@@ -26,6 +26,8 @@ var questions = [
 
 inquirer.prompt(questions).then(answers => {
 
+		var start = new Date().getTime();
+
 		console.log('\n\nGenerating. Please wait... (may take from seconds up to many hours\ndepending on suffix length and CPU speed)\n\n');
 		const searchString = answers['suffix'].toLowerCase();
 
@@ -45,10 +47,17 @@ inquirer.prompt(questions).then(answers => {
 			var rdx_addr = bech32.encode("rdx", readdr_bytes5);
 
 			if(rdx_addr.endsWith(searchString)){
+
+				var end = new Date().getTime();
+				var time = end - start;
+
+				console.log('Execution Time: ' + msToTime(time));
 				console.log('Radix Address: ' + rdx_addr);
 				console.log('Public Key: ' + publicKey);
 				console.log('Private Key: ' + privatekey);
 				console.log('Mnemonic: ' + mnemonic);
+
+
 				console.log('\n');
 				found = true;
 			}
@@ -86,4 +95,19 @@ function convertbits (data, frombits, tobits, pad) {
 	}
 
 	return ret;
+}
+
+
+
+function msToTime(duration) {
+var milliseconds = parseInt((duration%1000))
+    , seconds = parseInt((duration/1000)%60)
+    , minutes = parseInt((duration/(1000*60))%60)
+    , hours = parseInt((duration/(1000*60*60))%24);
+
+hours = (hours < 10) ? "0" + hours : hours;
+minutes = (minutes < 10) ? "0" + minutes : minutes;
+seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
 }
