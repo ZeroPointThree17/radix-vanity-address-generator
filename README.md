@@ -24,19 +24,13 @@ cd radix-vanity-address-generator
 
 Then, install pre-requisite packages:
 ```
-npm install inquirer@8.2.2
 npm install bip39@3.0.4
 npm install hdkey@2.0.1
 npm install bech32@2.0.0
 npm install buffer@5.7.1
 ```
 
-Finally, run the script:
+Finally, run the script (replacing "arg" with your suffix):
 ```
-node ./radix-vanity-address-generator.js
-```
-
-IF you want to run the script without a prompt, and with an argument instead, run this (replacing "arg" with your suffix):
-```
-node ./radix-vanity-address-generator-no-prompt.js arg
+node ./radix-vanity-address-generator.js arg
 ```
