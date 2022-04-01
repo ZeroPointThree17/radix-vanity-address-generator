@@ -49,7 +49,6 @@ while(found == false){
 
 
 
-
 function convertbits (data, frombits, tobits, pad) {
 	var acc = 0;
 	var bits = 0;
