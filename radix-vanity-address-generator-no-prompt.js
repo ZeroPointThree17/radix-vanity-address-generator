@@ -5,7 +5,7 @@
 // npm install buffer@5.7.1
 //
 // THEN RUN WITH BELOW COMMAND:
-// node ./radix-vanity-address-generator-no-prompt.js
+// node ./radix-vanity-address-generator-no-prompt.js <suffix_to_look_for>
 
 const bip39 = require('bip39');
 var HDKey = require('hdkey');
