@@ -8,7 +8,6 @@
 // THEN RUN WITH BELOW COMMAND:
 // node ./radix-vanity-address-generator.js
 
-
 var inquirer = require('inquirer');
 const bip39 = require('bip39');
 var HDKey = require('hdkey');
