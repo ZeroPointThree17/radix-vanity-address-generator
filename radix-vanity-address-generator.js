@@ -27,7 +27,8 @@ var questions = [
 inquirer.prompt(questions).then(answers => {
 
 		console.log('\n\nGenerating. Please wait... (may take from seconds up to many hours\ndepending on suffix length and CPU speed)\n\n');
-		
+		const searchString = answers['suffix'].toLowerCase();
+
 		var found = false;
 
 		while(found == false){
@@ -43,7 +44,7 @@ inquirer.prompt(questions).then(answers => {
 			var readdr_bytes5 = convertbits(Uint8Array.from(readdr_bytes), 8, 5, true);
 			var rdx_addr = bech32.encode("rdx", readdr_bytes5);
 
-			if(rdx_addr.endsWith(answers['suffix'].toLowerCase())){
+			if(rdx_addr.endsWith(searchString)){
 				console.log('Radix Address: ' + rdx_addr);
 				console.log('Public Key: ' + publicKey);
 				console.log('Private Key: ' + privatekey);
