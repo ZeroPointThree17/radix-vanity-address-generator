@@ -35,7 +35,7 @@ Finally, run the script (replace "arg" with your suffix):
 node ./radix-vanity-address-generator.js arg
 ```
 
-IF, you want to run and output save results into a file (replace "arg" with your suffix):
+IF, you want it to run in the background and save the results into a file (replace "arg" with your suffix):
 ```
-node ./radix-vanity-address-generator.js arg > ./generator_output.txt
+nohup node ./radix-vanity-address-generator.js arg > ./generator_output.txt &
 ```

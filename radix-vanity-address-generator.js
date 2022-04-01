@@ -4,11 +4,11 @@
 // npm install bech32@2.0.0
 // npm install buffer@5.7.1
 //
-// THEN RUN WITH BELOW COMMAND:
-// node ./radix-vanity-address-generator-no-prompt.js <suffix_to_look_for>
+// Then run with command below (replace "arg" with your suffix):
+// node ./radix-vanity-address-generator.js arg
 //
-// TO RUN AND OUTPUT RESULTS TO FILE:
-// node ./radix-vanity-address-generator-no-prompt.js <suffix_to_look_for> > ./generator_output.txt
+// IF, you want it to run in the background and save the results into a file (replace "arg" with your suffix):
+// nohup node ./radix-vanity-address-generator.js arg > ./generator_output.txt &
 
 
 const bip39 = require('bip39');
